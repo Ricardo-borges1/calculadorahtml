@@ -15,14 +15,14 @@
 
 
 .item{
-    background-color: rgb(16, 12, 240);
+    background-color: rgb(130, 245, 201);
     height: 70px;
     min-width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap:16px;
-    color: rgb(252, 252, 252);
+    color: rgb(14, 13, 13);
     padding-inline: 16px;
 }
 
