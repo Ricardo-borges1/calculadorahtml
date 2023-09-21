@@ -32,27 +32,26 @@ function identificar(){
 botaoSomar.addEventListener('click', somar)
 botaoIdentificar.addEventListener('click', identificar)
 
-function calcularMedia (){
-    const nota1 = Number (document.getElementById('nota1').value)
-    const nota2 = Number (document.getElementById('nota2').value)
-    const nota3 = Number (document.getElementById('nota3').value)
-    const nota4 = Number (document.getElementById('nota4').value)
+function calcularMedia() {
+    const nota1 = Number(document.getElementById('nota1').value)
+    const nota2 = Number(document.getElementById('nota2').value)
+    const nota3 = Number(document.getElementById('nota3').value)
+    const nota4 = Number(document.getElementById('nota4').value)
 
-    const md1 = (nota1 + nota2 + nota3 + nota4) /4;
+    const md1 = (nota1 + nota2 + nota3 + nota4) / 4;
+    const resultado = document.getElementById('resultado-media');
 
-    if (md1 >=7){
-        //md1 mesmo que média
-        alert("Sua média é" + md1 + ".Parabéns, você foi aprovado!!");
+    if (md1 >= 7) {
+        resultado.textContent = "Sua média é " + md1 + ". Parabéns, você foi aprovado!!";
     } else {
-        const ne = prompt (`Sua média é ${md1}. Insira sua nota de exame:`);
-
+        const ne = prompt(`Sua média é ${md1}. Insira sua nota de exame:`);
         const md2 = (md1 + Number(ne)) / 2;
 
-       if (md2 >= 5) {
-        alert(`Sua nova média é ${md2}. Aprovado em exame.`);
-    } else {
-        alert(`Sua nova média é ${md2}. Você foi reprovado.`);
-    }
+        if (md2 >= 5) {
+            resultado.textContent = `Sua média é ${md2}. Aprovado em exame.`;
+        } else {
+            resultado.textContent = `Sua média é ${md2}. Você foi reprovado.`;
+        }
     }
 }
 botaoMedia.addEventListener('click', calcularMedia);
@@ -71,29 +70,30 @@ botaoParOuImpar.addEventListener('click',parOuImpar)
 
 
 function calcular(){
-    const numero = parseInt (document.getElementById ("numero").value)
-    const resultado = numero * 2;
+    const numero = parseInt(document.getElementById("numero").value);
+    const resultado = document.getElementById("resultado-o");
+    
+    const resultadoMultiplicacao = numero * 2;
 
-    if (resultado > 30) {
-        alert ( "O resultado da multiplicação é: " + resultado);
+    if (resultadoMultiplicacao > 30) {
+        resultado.textContent = "O resultado da multiplicação é: " + resultadoMultiplicacao;
     } else {
-        alert ( "O resultado não é maior que 30");
+        resultado.textContent = "Erro: O resultado não é maior que 30";
     }
-        
-    } 
+}
 
     botaoMultiplicacao.addEventListener('click', calcular)
     
     function leitura(){
-        const numero4 = parseInt (document.getElementById ("valor1").value);
+        const numero4 = parseInt(document.getElementById("valor1").value);
+        const resultado = document.getElementById("resultado-l");
     
-        if (numero4 <= 3) {
-            alert ( "O número digitado é: " + numero4);
+        if (numero4 >= 3) {
+            resultado.textContent = "O número digitado é: " + numero4;
         } else {
-            alert ( "O resultado não é maior que 3");
+            resultado.textContent = "Erro: O número não é maior ou igual a 3";
         }
-            
-        } 
+    }
 
 
 botaoLeitura.addEventListener('click', leitura)

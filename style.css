@@ -35,10 +35,10 @@ button{
     cursor: pointer;
 }
 
-.resultado{
-    width: 75px;
-    height: 20px;
-    background-color: aliceblue;
-    color: black;
+.resultado {
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-top: 10px;
+    width: 200px; 
+    word-wrap: break-word; 
 }
-
